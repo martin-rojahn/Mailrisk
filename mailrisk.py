@@ -83,7 +83,7 @@ def _url_format_time(time: datetime) -> str:
     return str(time.timestamp())
 
 
-def events_list(page: int = 1, limit: int = 20, as_partner=False, direction='asc', after=None, after_id: int = None):
+def events_list(page: int = 1, limit: int = 20, as_partner=True, direction='asc', after=None, after_id: int = None):
     """
     Returns an array of Event
     """
@@ -95,7 +95,7 @@ def events_list(page: int = 1, limit: int = 20, as_partner=False, direction='asc
                  after_id=after_id)
 
 
-def emails_list(page: int = 1, limit: int = 20, as_partner=False, direction='desc', after=None, cohort_id=None,
+def emails_list(page: int = 1, limit: int = 20, as_partner=True, direction='desc', after=None, cohort_id=None,
                 signature_id=None, email_ids=None, enrich=False):
     """
     Returns an array of Email
